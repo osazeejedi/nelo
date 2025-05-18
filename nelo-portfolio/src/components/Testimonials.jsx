@@ -162,30 +162,6 @@ const Testimonials = () => {
             </motion.div>
           ))}
         </StaggeredList>
-
-        {/* Featured client logos (placeholders) */}
-        <FadeIn direction="up" delay={0.6} className="mt-16">
-          <h3 className="text-center text-xl font-semibold text-light mb-8">Trusted By</h3>
-          <div className="flex flex-wrap justify-center gap-8 opacity-70">
-            {[1, 2, 3, 4, 5].map((logo, index) => (
-              <motion.div 
-                key={logo} 
-                className="w-32 h-16 bg-gray-800 rounded flex items-center justify-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
-                whileHover={{ 
-                  scale: 1.05, 
-                  backgroundColor: "rgba(30, 41, 59, 1)",
-                  boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-                }}
-              >
-                <div className="text-gray-500 font-semibold">CLIENT {logo}</div>
-              </motion.div>
-            ))}
-          </div>
-        </FadeIn>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FadeIn, StaggeredList } from './animations';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   // Form state
@@ -11,10 +12,18 @@ const Contact = () => {
     message: ''
   });
   
+  // Form ref for EmailJS
+  const form = useRef();
+  
   // Form submission state
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitResult, setSubmitResult] = useState({ success: false, message: '' });
   const [showResult, setShowResult] = useState(false);
+  
+  // EmailJS configuration
+  const SERVICE_ID = 'service_chinelo'; // Replace with your EmailJS service ID
+  const TEMPLATE_ID = 'template_chinelo'; // Replace with your EmailJS template ID
+  const PUBLIC_KEY = 'YOUR_EMAILJS_PUBLIC_KEY'; // Replace with your EmailJS public key
 
   // Handle input changes
   const handleChange = (e) => {
@@ -30,28 +39,38 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitResult({
-        success: true,
-        message: 'Thank you for your message! I will get back to you soon.'
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      .then((result) => {
+        console.log('Email sent successfully:', result.text);
+        setIsSubmitting(false);
+        setSubmitResult({
+          success: true,
+          message: 'Thank you for your message! I will get back to you soon.'
+        });
+        setShowResult(true);
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          setShowResult(false);
+        }, 5000);
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error.text);
+        setIsSubmitting(false);
+        setSubmitResult({
+          success: false,
+          message: 'Failed to send message. Please try again later or contact me directly via email.'
+        });
+        setShowResult(true);
       });
-      setShowResult(true);
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        setShowResult(false);
-      }, 5000);
-    }, 1500);
   };
 
   // Contact information
@@ -260,7 +279,7 @@ const Contact = () => {
               <div className="bg-dark p-4 sm:p-6 rounded-lg shadow-lg">
                 <h3 className="text-lg sm:text-xl font-semibold text-light mb-4 sm:mb-6">Send Me a Message</h3>
               
-                <form onSubmit={handleSubmit}>
+                <form ref={form} onSubmit={handleSubmit}>
                   <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
                     <div>
                       <label htmlFor="name" className="block text-gray-300 mb-1 sm:mb-2 text-sm sm:text-base">Your Name</label>

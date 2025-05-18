@@ -29,9 +29,9 @@ const Hero = () => {
   }, []);
   return (
     <section id="hero" className="min-h-[90vh] sm:min-h-screen flex items-center bg-dark pt-16 relative overflow-hidden">
-      {/* Animated background elements */}
-      <ParticleBackground count={30} />
-      <FloatingIcons count={8} />
+      {/* Animated background elements - increased count for more visibility */}
+      <ParticleBackground count={45} />
+      <FloatingIcons count={12} />
       <div className="container mx-auto px-4 py-8 sm:py-16 grid md:grid-cols-2 gap-6 md:gap-8 items-center">
         <div className="order-2 md:order-1">
           <StaggeredList 
@@ -135,18 +135,9 @@ const Hero = () => {
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
-                {/* Glowing halo effect */}
-                <motion.div 
-                  className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 z-0 opacity-0 group-hover:opacity-100"
-                  animate={{
-                    scale: [1, 1.05, 1],
-                    opacity: [0, 0.5, 0]
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    repeatType: "loop"
-                  }}
+                {/* Static glowing halo effect */}
+                <div 
+                  className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 z-0 opacity-0 group-hover:opacity-40 transition-opacity duration-300"
                 />
                 <img 
                   src={neloImage} 

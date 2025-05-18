@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 const ParticleBackground = ({ 
   count = 50, 
   colors = ['#0D9488', '#0EA5E9', '#6366F1'], 
-  minSize = 2, 
-  maxSize = 6,
+  minSize = 4, 
+  maxSize = 10,
   minSpeed = 0.5,
   maxSpeed = 2,
   className = "absolute inset-0 z-0 overflow-hidden"
@@ -35,7 +35,7 @@ const ParticleBackground = ({
       {particles.map((particle) => (
         <motion.div
           key={particle.id}
-          className="absolute rounded-full opacity-20"
+          className="absolute rounded-full opacity-30"
           style={{
             width: particle.size,
             height: particle.size,
@@ -55,7 +55,7 @@ const ParticleBackground = ({
               Math.random() * 100 - 50
             ],
             scale: [1, 1.2, 1],
-            opacity: [0.1, 0.3, 0.1]
+            opacity: [0.2, 0.4, 0.2]
           }}
           transition={{
             duration: particle.duration * 10,
@@ -71,7 +71,7 @@ const ParticleBackground = ({
       {[1, 2, 3, 4, 5].map((_, index) => (
         <motion.div
           key={`graph-${index}`}
-          className="absolute opacity-5"
+          className="absolute opacity-10"
           style={{
             width: Math.random() * 100 + 50,
             height: Math.random() * 60 + 20,
@@ -83,7 +83,7 @@ const ParticleBackground = ({
           animate={{
             x: [0, 20, 0],
             y: [0, 10, 0],
-            opacity: [0.05, 0.1, 0.05]
+            opacity: [0.1, 0.2, 0.1]
           }}
           transition={{
             duration: 15 + index * 2,

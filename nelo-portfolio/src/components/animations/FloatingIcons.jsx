@@ -36,9 +36,9 @@ const icons = [
 ];
 
 const FloatingIcons = ({ 
-  count = 5, 
-  minSize = 20, 
-  maxSize = 40,
+  count = 10, 
+  minSize = 30, 
+  maxSize = 60,
   className = "absolute inset-0 z-0 overflow-hidden pointer-events-none"
 }) => {
   // Generate random positions for icons
@@ -77,7 +77,7 @@ const FloatingIcons = ({
           key={item.id}
           xmlns="http://www.w3.org/2000/svg"
           viewBox={item.icon.viewBox}
-          className="absolute opacity-5"
+          className="absolute opacity-15"
           style={{
             width: item.size,
             height: item.size,
@@ -90,7 +90,7 @@ const FloatingIcons = ({
             x: [0, Math.random() * 40 - 20, 0],
             y: [0, Math.random() * 40 - 20, 0],
             rotate: [item.rotate, item.rotate + 20, item.rotate],
-            opacity: [0.05, 0.1, 0.05]
+            opacity: [0.15, 0.25, 0.15]
           }}
           transition={{
             duration: item.duration,
@@ -101,7 +101,7 @@ const FloatingIcons = ({
           }}
           whileHover={{
             scale: 1.5,
-            opacity: 0.3,
+            opacity: 0.4,
             transition: { duration: 0.3 }
           }}
         >

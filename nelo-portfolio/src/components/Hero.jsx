@@ -70,34 +70,56 @@ const Hero = () => {
               With over 8+ years of experience investigating complex financial crimes, tracing assets, 
               and enforcing compliance across national and international frameworks.
             </p>
-            
-            <div className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-4">
-              <motion.a 
-                href="/Chinelo Opara CV.pdf" 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 sm:px-6 py-2.5 sm:py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors text-center"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 10px 15px -3px rgba(13, 148, 136, 0.3)"
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View Resume
-              </motion.a>
-              <motion.a 
-                href="#contact" 
-                className="px-5 sm:px-6 py-2.5 sm:py-3 border border-secondary text-secondary font-medium rounded-md hover:bg-secondary/10 transition-colors text-center"
-                whileHover={{ 
-                  scale: 1.05,
-                  boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.2)"
-                }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Contact Me
-              </motion.a>
-            </div>
           </StaggeredList>
+          
+          {/* Buttons moved outside StaggeredList for better interaction */}
+          <div className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-4 mt-4 relative z-10">
+            <motion.button 
+              onClick={() => window.open('./Chinelo Opara CV.pdf', '_blank')}
+              className="px-5 sm:px-6 py-2.5 sm:py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-all text-center cursor-pointer active:scale-95 active:bg-primary/80 active:shadow-inner"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 10px 15px -3px rgba(13, 148, 136, 0.3)"
+              }}
+              whileTap={{ 
+                scale: 0.95,
+                boxShadow: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.2)"
+              }}
+              initial={{ scale: 1 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 500, 
+                damping: 15 
+              }}
+            >
+              View Resume
+            </motion.button>
+            <motion.button 
+              onClick={() => {
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="px-5 sm:px-6 py-2.5 sm:py-3 border border-secondary text-secondary font-medium rounded-md hover:bg-secondary/10 transition-all text-center cursor-pointer active:scale-95 active:bg-secondary/20 active:shadow-inner"
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 10px 15px -3px rgba(59, 130, 246, 0.2)"
+              }}
+              whileTap={{ 
+                scale: 0.95,
+                boxShadow: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.2)"
+              }}
+              initial={{ scale: 1 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 500, 
+                damping: 15 
+              }}
+            >
+              Contact Me
+            </motion.button>
+          </div>
         </div>
         
         <div className="order-1 md:order-2 flex justify-center">

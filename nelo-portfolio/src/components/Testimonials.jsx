@@ -6,21 +6,21 @@ const Testimonials = () => {
   // Testimonial data
   const testimonials = [
     {
-      quote: "Chinelo's expertise in cybersecurity transformed our organization's security posture. Her methodical approach to identifying vulnerabilities and implementing robust security measures has given us confidence in our digital infrastructure.",
-      name: "Sarah Johnson",
-      position: "CTO, TechSecure Solutions",
+      quote: "Chinelo's expertise in financial crime investigation was instrumental in uncovering a complex fraud scheme within our organization. Her methodical approach to tracing assets and gathering evidence led to successful prosecution and asset recovery.",
+      name: "Dr. Ibrahim Musa",
+      position: "Director, Central Bank of Nigeria",
       rating: 5
     },
     {
-      quote: "Working with Chinelo was a game-changer for our company. Her deep knowledge of threat detection and incident response helped us prevent what could have been a devastating breach. I highly recommend her services.",
-      name: "Michael Chen",
-      position: "Director of IT, FinanceGuard Inc.",
+      quote: "Working with Chinelo was a game-changer for our compliance department. Her deep knowledge of AML/CFT regulations and practical implementation strategies helped us establish robust systems that passed regulatory scrutiny with flying colors.",
+      name: "Amina Okonkwo",
+      position: "Head of Compliance, First Bank of Nigeria",
       rating: 5
     },
     {
-      quote: "Chinelo's security assessment uncovered critical vulnerabilities that our previous audits had missed. Her detailed remediation plan was practical and effective, significantly improving our security posture.",
-      name: "Jessica Williams",
-      position: "CISO, HealthData Systems",
+      quote: "Chinelo's financial crime risk assessment uncovered critical vulnerabilities that our previous audits had missed. Her detailed remediation plan was practical and effective, significantly improving our regulatory compliance posture.",
+      name: "David Adeyemi",
+      position: "CEO, Nigerian Financial Intelligence Unit",
       rating: 5
     }
   ];
@@ -40,7 +40,7 @@ const Testimonials = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           ></motion.div>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            Hear what my clients have to say about my cybersecurity services and expertise.
+            Hear what my clients have to say about my financial crime investigation and compliance expertise.
           </p>
         </FadeIn>
 

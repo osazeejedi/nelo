@@ -6,47 +6,27 @@ const Experience = () => {
   // Career timeline data
   const timeline = [
     {
-      year: '2022 - Present',
-      title: 'Senior Cybersecurity Consultant',
-      company: 'SecureNet Solutions',
-      description: 'Lead security assessments and implement comprehensive security strategies for Fortune 500 clients. Specialize in threat modeling, security architecture, and advanced persistent threat (APT) defense.',
+      year: 'Aug 2020 - Present',
+      title: 'Financial Crime Specialist',
+      company: 'Office of the National Security Adviser (ONSA), Nigeria',
+      description: 'Lead investigations into complex financial crimes, trace assets, and enforce compliance across national and international frameworks. Collaborate with government agencies to combat financial fraud and terrorist financing.',
       achievements: [
-        'Reduced security incidents by 80% for a major financial institution',
-        'Designed zero-trust architecture for a healthcare provider with 50+ locations',
-        'Led a team of 8 security professionals across multiple client engagements'
+        'Led investigations in major bribery scandals (Dasuki Gate)',
+        'Recovered assets worth ₦20 billion',
+        'Presented evidence in high-profile court cases',
+        'Reviewed sanctions lists and analyzed terrorist financing patterns'
       ]
     },
     {
-      year: '2018 - 2022',
-      title: 'Information Security Manager',
-      company: 'GlobalTech Industries',
-      description: 'Managed enterprise security operations and led the security incident response team. Developed and implemented security policies, standards, and procedures.',
+      year: 'Mar 2017 - Jan 2025',
+      title: 'Financial Crime Investigator / Assistant Superintendent',
+      company: 'Economic and Financial Crimes Commission (EFCC), Nigeria',
+      description: 'Investigated financial crimes including fraud, money laundering, and corruption. Collaborated with national and international agencies to trace and recover stolen assets.',
       achievements: [
-        'Established a 24/7 security operations center (SOC)',
-        'Implemented automated threat intelligence platform reducing response time by 65%',
-        'Successfully achieved ISO 27001 certification with zero non-conformities'
-      ]
-    },
-    {
-      year: '2015 - 2018',
-      title: 'Network Security Engineer',
-      company: 'DataGuard Systems',
-      description: 'Designed and implemented secure network infrastructure. Conducted vulnerability assessments and penetration testing to identify security gaps.',
-      achievements: [
-        'Redesigned network security architecture saving $300K annually in operational costs',
-        'Implemented intrusion detection/prevention systems across 12 global locations',
-        'Developed automated compliance reporting system for regulatory requirements'
-      ]
-    },
-    {
-      year: '2012 - 2015',
-      title: 'Security Analyst',
-      company: 'CyberDefense Corp',
-      description: 'Monitored security events and conducted incident investigations. Performed vulnerability scanning and security assessments.',
-      achievements: [
-        'Identified and remediated critical zero-day vulnerability preventing potential data breach',
-        'Created security awareness training program adopted company-wide',
-        'Recognized as "Security Professional of the Year" in 2014'
+        'Investigated commercial banking and pension fraud cases',
+        'Recovered ₦11 billion and $40 million in assets',
+        'Collaborated with CBN, SEC, Interpol, and FBI',
+        'Investigated Suspicious Transaction Reports (STRs) and SARs from NFIU'
       ]
     }
   ];
@@ -66,8 +46,8 @@ const Experience = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           ></motion.div>
           <p className="text-gray-300 max-w-3xl mx-auto text-sm sm:text-base">
-            A decade of experience securing digital assets and protecting organizations 
-            from evolving cyber threats.
+            Eight years of experience investigating complex financial crimes, tracing assets, 
+            and enforcing compliance across national and international frameworks.
           </p>
         </FadeIn>
 

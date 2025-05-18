@@ -28,7 +28,7 @@ const Footer = () => {
         </svg>
       ),
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/'
+      url: 'https://www.linkedin.com/in/chinelo-opara'
     },
     {
       icon: (
@@ -68,8 +68,8 @@ const Footer = () => {
           <FadeIn direction="up" delay={0.1}>
             <h3 className="text-lg sm:text-xl font-bold text-light mb-3 sm:mb-4">Chinelo Opara</h3>
             <p className="mb-4 text-sm sm:text-base">
-              Cybersecurity analyst with 10+ years of experience protecting 
-              organizations from digital threats.
+              Financial Crime Specialist with 8 years of experience investigating 
+              complex financial crimes and enforcing compliance.
             </p>
             <div className="flex space-x-3 sm:space-x-4">
               {socialLinks.map((social, index) => (
@@ -130,10 +130,10 @@ const Footer = () => {
                   />
                 </svg>
                 <a 
-                  href="mailto:chinelo.opara@example.com" 
+                  href="mailto:chineloopara@gmail.com" 
                   className="hover:text-primary transition-colors"
                 >
-                  chinelo.opara@example.com
+                  chineloopara@gmail.com
                 </a>
               </motion.li>
               <motion.li 
@@ -156,10 +156,10 @@ const Footer = () => {
                   />
                 </svg>
                 <a 
-                  href="tel:+15551234567" 
+                  href="tel:+2348067539631" 
                   className="hover:text-primary transition-colors"
                 >
-                  +1 (555) 123-4567
+                  +234 806 753 9631
                 </a>
               </motion.li>
               <motion.li 
@@ -187,7 +187,7 @@ const Footer = () => {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" 
                   />
                 </svg>
-                <span>San Francisco, CA</span>
+                <span>Abuja, Nigeria</span>
               </motion.li>
             </ul>
           </FadeIn>
@@ -205,7 +205,7 @@ const Footer = () => {
             &copy; {currentYear} Chinelo Vivian Opara. All rights reserved.
           </p>
           <p className="text-xs sm:text-sm mt-2 text-gray-500">
-            Designed with <span className="text-red-500">❤</span> for cybersecurity professionals
+            Designed with <span className="text-red-500">❤</span> for financial crime specialists
           </p>
         </motion.div>
       </div>

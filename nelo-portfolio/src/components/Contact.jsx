@@ -74,8 +74,8 @@ const Contact = () => {
         </svg>
       ),
       title: 'Email',
-      info: 'chinelo.opara@example.com',
-      link: 'mailto:chinelo.opara@example.com'
+      info: 'chineloopara@gmail.com',
+      link: 'mailto:chineloopara@gmail.com'
     },
     {
       icon: (
@@ -95,8 +95,8 @@ const Contact = () => {
         </svg>
       ),
       title: 'Phone',
-      info: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      info: '+234 806 753 9631',
+      link: 'tel:+2348067539631'
     },
     {
       icon: (
@@ -122,7 +122,7 @@ const Contact = () => {
         </svg>
       ),
       title: 'Location',
-      info: 'San Francisco, CA',
+      info: 'Abuja, Nigeria',
       link: null
     }
   ];
@@ -141,7 +141,7 @@ const Contact = () => {
         </svg>
       ),
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/'
+      url: 'https://www.linkedin.com/in/chinelo-opara'
     },
     {
       icon: (
@@ -188,8 +188,8 @@ const Contact = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           ></motion.div>
           <p className="text-gray-300 max-w-3xl mx-auto text-sm sm:text-base">
-            Have a project in mind or need cybersecurity consulting? 
-            I'm here to help secure your digital assets.
+            Need financial crime investigation expertise or compliance consulting? 
+            I'm here to help protect your organization from financial threats.
           </p>
         </FadeIn>
 

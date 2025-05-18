@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import neloImage from '../assets/nelo.svg';
 import { motion } from 'framer-motion';
-import { FadeIn, StaggeredList } from './animations';
+import { 
+  FadeIn, 
+  StaggeredList, 
+  TypeWriter, 
+  TextCarousel, 
+  ParticleBackground,
+  FloatingIcons
+} from './animations';
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -21,7 +28,10 @@ const Hero = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
   return (
-    <section id="hero" className="min-h-[90vh] sm:min-h-screen flex items-center bg-dark pt-16">
+    <section id="hero" className="min-h-[90vh] sm:min-h-screen flex items-center bg-dark pt-16 relative overflow-hidden">
+      {/* Animated background elements */}
+      <ParticleBackground count={30} />
+      <FloatingIcons count={8} />
       <div className="container mx-auto px-4 py-8 sm:py-16 grid md:grid-cols-2 gap-6 md:gap-8 items-center">
         <div className="order-2 md:order-1">
           <StaggeredList 
@@ -33,25 +43,39 @@ const Hero = () => {
             <div className="inline-block px-2 sm:px-3 py-1 bg-primary/20 text-primary rounded-full mb-3 sm:mb-4 text-sm sm:text-base">
               <span className="flex items-center">
                 <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                10+ Years Experience
+                8+ Years Experience
               </span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-light mb-3 sm:mb-4">
-              Chinelo Vivian Opara
+              <TypeWriter 
+                text="Hi, I'm Chinelo" 
+                delay={80} 
+                initialDelay={500}
+              />
               <span className="block text-xl sm:text-2xl md:text-3xl text-primary mt-1 sm:mt-2">
-                Cybersecurity Analyst
+                <TextCarousel 
+                  texts={[
+                    "Financial Crime Specialist",
+                    "Asset Tracer",
+                    "Compliance Analyst"
+                  ]}
+                  interval={3000}
+                  initialDelay={2500}
+                />
               </span>
             </h1>
             
             <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-lg">
-              Protecting digital assets and securing networks with expertise in threat detection, 
-              vulnerability assessment, and security strategy implementation.
+              With over 8+ years of experience investigating complex financial crimes, tracing assets, 
+              and enforcing compliance across national and international frameworks.
             </p>
             
             <div className="flex flex-col xs:flex-row flex-wrap gap-3 sm:gap-4">
               <motion.a 
-                href="#resume" 
+                href="/Chinelo Opara CV.pdf" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 sm:px-6 py-2.5 sm:py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors text-center"
                 whileHover={{ 
                   scale: 1.05,
@@ -80,7 +104,7 @@ const Hero = () => {
           <FadeIn delay={0.3} duration={0.8}>
             <div className="relative">
               <motion.div 
-                className="w-48 h-48 xs:w-56 xs:h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-3 sm:border-4 border-primary/30 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20 group"
+                className="w-56 h-56 xs:w-64 xs:h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-full overflow-hidden border-3 sm:border-4 border-primary/30 transition-all duration-300 hover:border-primary hover:shadow-lg hover:shadow-primary/20 group relative"
                 whileHover={{ 
                   scale: 1.03,
                   rotate: 3,
@@ -89,6 +113,19 @@ const Hero = () => {
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
+                {/* Glowing halo effect */}
+                <motion.div 
+                  className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 z-0 opacity-0 group-hover:opacity-100"
+                  animate={{
+                    scale: [1, 1.05, 1],
+                    opacity: [0, 0.5, 0]
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatType: "loop"
+                  }}
+                />
                 <img 
                   src={neloImage} 
                   alt="Chinelo Vivian Opara" 

@@ -18,52 +18,52 @@ const Services = () => {
             strokeLinecap="round" 
             strokeLinejoin="round" 
             strokeWidth={1.5} 
-            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" 
-          />
-        </svg>
-      ),
-      title: 'Security Assessment',
-      description: 'Comprehensive evaluation of your organization\'s security posture to identify vulnerabilities and recommend mitigation strategies.'
-    },
-    {
-      icon: (
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          className="h-12 w-12 text-primary" 
-          fill="none" 
-          viewBox="0 0 24 24" 
-          stroke="currentColor"
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth={1.5} 
-            d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" 
-          />
-        </svg>
-      ),
-      title: 'Penetration Testing',
-      description: 'Simulated cyber attacks to identify and exploit vulnerabilities in your systems before malicious actors can discover them.'
-    },
-    {
-      icon: (
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          className="h-12 w-12 text-primary" 
-          fill="none" 
-          viewBox="0 0 24 24" 
-          stroke="currentColor"
-        >
-          <path 
-            strokeLinecap="round" 
-            strokeLinejoin="round" 
-            strokeWidth={1.5} 
             d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" 
           />
         </svg>
       ),
-      title: 'Security Compliance',
-      description: 'Ensure your organization meets industry regulations and standards such as GDPR, HIPAA, PCI DSS, and ISO 27001.'
+      title: 'Financial Crime Investigation',
+      description: 'Thorough investigation of complex financial crimes including fraud, money laundering, and corruption with detailed evidence collection and analysis.'
+    },
+    {
+      icon: (
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          className="h-12 w-12 text-primary" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={1.5} 
+            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" 
+          />
+        </svg>
+      ),
+      title: 'AML/CFT Compliance',
+      description: 'Implementation of robust Anti-Money Laundering and Counter-Financing of Terrorism frameworks to ensure regulatory compliance.'
+    },
+    {
+      icon: (
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          className="h-12 w-12 text-primary" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          stroke="currentColor"
+        >
+          <path 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
+            strokeWidth={1.5} 
+            d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" 
+          />
+        </svg>
+      ),
+      title: 'Asset Tracing & Recovery',
+      description: 'Specialized techniques to identify, trace, and recover assets linked to financial crimes across multiple jurisdictions.'
     },
     {
       icon: (
@@ -82,8 +82,8 @@ const Services = () => {
           />
         </svg>
       ),
-      title: 'Security Architecture',
-      description: 'Design and implementation of robust security frameworks that protect your critical assets while enabling business operations.'
+      title: 'Risk Assessment',
+      description: 'Comprehensive evaluation of financial crime risks within your organization with tailored mitigation strategies and controls.'
     },
     {
       icon: (
@@ -98,12 +98,12 @@ const Services = () => {
             strokeLinecap="round" 
             strokeLinejoin="round" 
             strokeWidth={1.5} 
-            d="M13 10V3L4 14h7v7l9-11h-7z" 
+            d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" 
           />
         </svg>
       ),
-      title: 'Incident Response',
-      description: 'Rapid and effective response to security incidents, minimizing damage and reducing recovery time and costs.'
+      title: 'Sanctions & Prosecution Support',
+      description: 'Expert witness testimony and evidence preparation for financial crime cases, ensuring successful prosecution outcomes.'
     },
     {
       icon: (
@@ -122,8 +122,8 @@ const Services = () => {
           />
         </svg>
       ),
-      title: 'Security Training',
-      description: 'Customized security awareness programs that transform employees from security vulnerabilities into your first line of defense.'
+      title: 'Compliance Training',
+      description: 'Customized training programs on financial crime detection, prevention, and compliance for organizations of all sizes.'
     }
   ];
 
@@ -142,8 +142,8 @@ const Services = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
           ></motion.div>
           <p className="text-gray-300 max-w-3xl mx-auto">
-            Comprehensive cybersecurity services tailored to protect your organization's 
-            digital assets and infrastructure.
+            Specialized financial crime services designed to protect your organization 
+            from fraud, money laundering, and regulatory non-compliance.
           </p>
         </FadeIn>
 
@@ -183,8 +183,8 @@ const Services = () => {
         {/* Call to action */}
         <FadeIn direction="up" delay={0.5} className="mt-16 text-center">
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Looking for a customized security solution for your organization? 
-            Let's discuss how I can help protect your digital assets.
+            Need expert assistance with financial crime prevention or investigation? 
+            Let's discuss how I can help protect your organization from financial threats.
           </p>
           <motion.a 
             href="#contact" 

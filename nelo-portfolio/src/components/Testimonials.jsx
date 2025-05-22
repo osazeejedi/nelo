@@ -7,14 +7,14 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote: "Chinelo's expertise in financial crime investigation was instrumental in uncovering a complex fraud scheme within our organization. Her methodical approach to tracing assets and gathering evidence led to successful prosecution and asset recovery.",
-      name: "Dr. Ibrahim Musa",
-      position: "Director, Central Bank of Nigeria",
+      name: "Hamma'Adama Bello",
+      position: "Assistant Commander of the EFCC, SA to the National Security Adviser, Nigeria",
       rating: 5
     },
     {
-      quote: "Working with Chinelo was a game-changer for our compliance department. Her deep knowledge of AML/CFT regulations and practical implementation strategies helped us establish robust systems that passed regulatory scrutiny with flying colors.",
-      name: "Amina Okonkwo",
-      position: "Head of Compliance, First Bank of Nigeria",
+      quote: "I highly recommend Chinelo. She is a person of exceptional integrity, adhering to the highest ethical standards. Chinelo possesses a deep empathy, allowing her to understand and navigate the sensitive nature of financial crime investigations with compassion and understanding. Her dedication to justice is unwavering; she is committed to uncovering the truth and ensuring accountability in every situation. Chinelo's expertise, combined with these crucial personal qualities, makes her an invaluable asset. I recommend her without reservation.",
+      name: "Alberto Tebaldi",
+      position: "Hospitality Consultant, Italy",
       rating: 5
     },
     {
